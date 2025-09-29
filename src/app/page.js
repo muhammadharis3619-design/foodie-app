@@ -30,62 +30,37 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -top-6 -right-6 size-40 rounded-full bg-[#ff7a59]/20 blur-2xl -z-10" />
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
-                  <Image src="/globe.svg" alt="Dish" width={64} height={64} />
-                  <p className="mt-3 font-semibold">Sushi Platter</p>
-                  <span className="text-foreground/60">$18</span>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
+                  <Image src="/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" alt="Stacks" width={640} height={480} className="h-40 w-full object-cover" />
+                  <div className="p-4">
+                    <p className="font-semibold">Stacks</p>
+                    <span className="text-foreground/60">$9</span>
+                  </div>
                 </div>
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
-                  <Image src="/window.svg" alt="Dish" width={64} height={64} />
-                  <p className="mt-3 font-semibold">Spicy Ramen</p>
-                  <span className="text-foreground/60">$12</span>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
+                  <Image src="/foods/yoad-shejtman-sPmF7MNzdnU-unsplash.jpg" alt="Shawarma" width={640} height={480} className="h-40 w-full object-cover" />
+                  <div className="p-4">
+                    <p className="font-semibold">Shawarma</p>
+                    <span className="text-foreground/60">$11</span>
+                  </div>
                 </div>
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
-                  <Image src="/file.svg" alt="Dish" width={64} height={64} />
-                  <p className="mt-3 font-semibold">Veggie Bowl</p>
-                  <span className="text-foreground/60">$10</span>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
+                  <Image src="/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" alt="Zinger Burger" width={640} height={480} className="h-40 w-full object-cover" />
+                  <div className="p-4">
+                    <p className="font-semibold">Zinger Burger</p>
+                    <span className="text-foreground/60">$14</span>
+                  </div>
                 </div>
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
-                  <Image src="/vercel.svg" alt="Dish" width={64} height={64} />
-                  <p className="mt-3 font-semibold">Burger Deluxe</p>
-                  <span className="text-foreground/60">$14</span>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
+                  <Image src="/foods/keesha-s-kitchen-gDwy_JEoz8k-unsplash.jpg" alt="Chicken Corn Soup" width={640} height={480} className="h-40 w-full object-cover" />
+                  <div className="p-4">
+                    <p className="font-semibold">Chicken Corn Soup</p>
+                    <span className="text-foreground/60">$8</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
-        <div className="flex items-end justify-between gap-4">
-          <h2 className="text-2xl sm:text-3xl font-bold">Featured Picks</h2>
-          <Link href="/menu" className="text-sm font-semibold text-foreground/80 hover:text-foreground">View all →</Link>
-        </div>
-
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {["Fire-Grilled Tacos","Truffle Pasta","Rainbow Salad","BBQ Wings","Poke Bowl","Cheese Pizza"].map((name, idx) => (
-            <div key={name} className="group rounded-2xl border border-black/5 dark:border-white/10 bg-background/60 backdrop-blur p-5 hover:shadow-xl hover:-translate-y-0.5 transition-all">
-              <div className="aspect-[16/9] rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex items-center justify-center">
-                <Image src={idx % 2 === 0 ? "/globe.svg" : "/window.svg"} alt={name} width={96} height={96} className="object-contain" />
-              </div>
-              <div className="mt-4 flex items-center justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold">{name}</h3>
-                  <p className="text-foreground/70">From $9</p>
-                </div>
-                <Link href="/menu" className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:underline">
-                  Order
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <Link href="/menu" className="inline-flex items-center justify-center rounded-lg bg-foreground text-background px-6 py-3 font-semibold hover:opacity-90">
-            Start Your Order
-          </Link>
         </div>
       </section>
     </div>

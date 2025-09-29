@@ -1,0 +1,47 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="wrap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8e7c8" />
+      <stop offset="100%" stop-color="#e8d1a9" />
+    </linearGradient>
+    <linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="filling" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#43a047" />
+      <stop offset="100%" stop-color="#ff7043" />
+    </linearGradient>
+  </defs>
+
+  <!-- soft ground shadow -->
+  <ellipse cx="128" cy="210" rx="90" ry="14" fill="#000" opacity="0.08"/>
+
+  <!-- wrap body -->
+  <g transform="translate(86,36)">
+    <path d="M20 22c0-12 10-22 22-22h20c12 0 22 10 22 22v130c0 12-10 22-22 22H42c-12 0-22-10-22-22V22z" fill="url(#wrap)" stroke="#d8c29b" stroke-width="3"/>
+
+    <!-- subtle paper folds -->
+    <path d="M26 38c18-8 48-8 66 0" stroke="#d8c29b" stroke-width="2" opacity="0.6"/>
+    <path d="M26 60c18-8 48-8 66 0" stroke="#d8c29b" stroke-width="2" opacity="0.5"/>
+    <path d="M26 82c18-8 48-8 66 0" stroke="#d8c29b" stroke-width="2" opacity="0.4"/>
+
+    <!-- top filling peeking out -->
+    <g transform="translate(18,-6)">
+      <path d="M16 40c10-10 30-12 44-6 10 4 18 2 24-2v14c-14 10-28 10-42 2-14-8-26 2-26 2V40z" fill="url(#filling)"/>
+      <circle cx="64" cy="28" r="6" fill="#e53935"/>
+      <circle cx="36" cy="28" r="6" fill="#7cb342"/>
+      <rect x="44" y="22" width="10" height="6" rx="3" fill="#ffb300"/>
+    </g>
+
+    <!-- grill/brown marks -->
+    <g stroke="#caa874" stroke-width="2" opacity="0.7">
+      <path d="M28 100c22-10 60-10 82 0"/>
+      <path d="M28 116c22-10 60-10 82 0"/>
+      <path d="M28 132c22-10 60-10 82 0"/>
+    </g>
+
+    <!-- bottom fold -->
+    <path d="M22 150c24 10 60 10 84 0v12c0 10-8 18-18 18H40c-10 0-18-8-18-18v-12z" fill="url(#shadow)"/>
+  </g>
+</svg>
