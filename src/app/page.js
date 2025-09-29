@@ -45,7 +45,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
-                  <Image src="/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" alt="Zinger Burger" width={640} height={480} className="h-40 w-full object-cover" />
+                  <Image src="/foods/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="Zinger Burger" width={640} height={480} className="h-40 w-full object-cover" />
                   <div className="p-4">
                     <p className="font-semibold">Zinger Burger</p>
                     <span className="text-foreground/60">$14</span>

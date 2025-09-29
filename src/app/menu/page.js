@@ -7,8 +7,10 @@ export default function MenuPage() {
 	const items = [
 		{ id: 1, name: "Stacks", price: "$9", img: "/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" },
 		{ id: 2, name: "Shawarma", price: "$11", img: "/foods/yoad-shejtman-sPmF7MNzdnU-unsplash.jpg" },
-		{ id: 3, name: "Zinger Burger", price: "$14", img: "/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" },
+		{ id: 3, name: "Zinger Burger", price: "$14", img: "/foods/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" },
 		{ id: 4, name: "Chicken Corn Soup", price: "$8", img: "/foods/keesha-s-kitchen-gDwy_JEoz8k-unsplash.jpg" },
+		{ id: 5, name: "Salad", price: "$9", img: "/foods/anna-pelzer-IGfIGP5ONV0-unsplash.jpg" },
+		{ id: 6, name: "Burrito", price: "$9", img: "/foods/clint-bustrillos-YFTGpQBNLVw-unsplash.jpg" },
 	];
 
 	return (
