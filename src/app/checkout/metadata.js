@@ -1,0 +1,1 @@
+export const metadata = { title: "Checkout | Foodie" };

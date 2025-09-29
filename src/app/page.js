@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import OrderGrid from "./components/OrderGrid";
+
+
 
 export default function Home() {
   return (
     <div className="min-h-dvh">
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#ffbf59]/30 via-transparent to-transparent blur-2xl" />
+        {/* Leaf animation removed as requested */}
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
@@ -29,36 +33,12 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute -top-6 -right-6 size-40 rounded-full bg-[#ff7a59]/20 blur-2xl -z-10" />
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
-                  <Image src="/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" alt="Stacks" width={640} height={480} className="h-40 w-full object-cover" />
-                  <div className="p-4">
-                    <p className="font-semibold">Stacks</p>
-                    <span className="text-foreground/60">$9</span>
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
-                  <Image src="/foods/yoad-shejtman-sPmF7MNzdnU-unsplash.jpg" alt="Shawarma" width={640} height={480} className="h-40 w-full object-cover" />
-                  <div className="p-4">
-                    <p className="font-semibold">Shawarma</p>
-                    <span className="text-foreground/60">$11</span>
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
-                  <Image src="/foods/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="Zinger Burger" width={640} height={480} className="h-40 w-full object-cover" />
-                  <div className="p-4">
-                    <p className="font-semibold">Zinger Burger</p>
-                    <span className="text-foreground/60">$14</span>
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-0 bg-background/70 overflow-hidden">
-                  <Image src="/foods/keesha-s-kitchen-gDwy_JEoz8k-unsplash.jpg" alt="Chicken Corn Soup" width={640} height={480} className="h-40 w-full object-cover" />
-                  <div className="p-4">
-                    <p className="font-semibold">Chicken Corn Soup</p>
-                    <span className="text-foreground/60">$8</span>
-                  </div>
-                </div>
-              </div>
+              <OrderGrid items={[
+                { id: 1, name: "Stacks", price: 9, img: "/foods/hailey-tong-CMwG_Brm2QE-unsplash.jpg" },
+                { id: 2, name: "Shawarma", price: 11, img: "/foods/yoad-shejtman-sPmF7MNzdnU-unsplash.jpg" },
+                { id: 3, name: "Zinger Burger", price: 14, img: "/foods/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" },
+                { id: 4, name: "Salad", price: 8, img: "/foods/keesha-s-kitchen-gDwy_JEoz8k-unsplash.jpg" },
+              ]} />
             </div>
           </div>
         </div>
