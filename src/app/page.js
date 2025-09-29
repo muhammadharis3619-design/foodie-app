@@ -1,103 +1,93 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-dvh">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#ffbf59]/30 via-transparent to-transparent blur-2xl" />
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-xs font-medium text-foreground/70">
+                <span>Fresh • Fast • Delicious</span>
+              </div>
+              <h1 className="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight">
+                Crave it. We make it.
+              </h1>
+              <p className="mt-4 text-lg text-foreground/70 max-w-xl">
+                Discover chef-crafted meals delivered hot to your door. Seasonal ingredients, bold flavors, zero hassle.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Link href="/menu" className="inline-flex items-center justify-center rounded-lg bg-foreground text-background px-6 py-3 font-semibold hover:opacity-90">
+                  Explore Menu
+                </Link>
+                <Link href="/about" className="inline-flex items-center justify-center rounded-lg border border-black/10 dark:border-white/15 px-6 py-3 font-semibold hover:bg-black/5 dark:hover:bg-white/10">
+                  Learn More
+                </Link>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute -top-6 -right-6 size-40 rounded-full bg-[#ff7a59]/20 blur-2xl -z-10" />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
+                  <Image src="/globe.svg" alt="Dish" width={64} height={64} />
+                  <p className="mt-3 font-semibold">Sushi Platter</p>
+                  <span className="text-foreground/60">$18</span>
+                </div>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
+                  <Image src="/window.svg" alt="Dish" width={64} height={64} />
+                  <p className="mt-3 font-semibold">Spicy Ramen</p>
+                  <span className="text-foreground/60">$12</span>
+                </div>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
+                  <Image src="/file.svg" alt="Dish" width={64} height={64} />
+                  <p className="mt-3 font-semibold">Veggie Bowl</p>
+                  <span className="text-foreground/60">$10</span>
+                </div>
+                <div className="rounded-2xl border border-black/5 dark:border-white/10 p-6 bg-background/70 backdrop-blur flex flex-col items-center">
+                  <Image src="/vercel.svg" alt="Dish" width={64} height={64} />
+                  <p className="mt-3 font-semibold">Burger Deluxe</p>
+                  <span className="text-foreground/60">$14</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-12">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold">Featured Picks</h2>
+          <Link href="/menu" className="text-sm font-semibold text-foreground/80 hover:text-foreground">View all →</Link>
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {["Fire-Grilled Tacos","Truffle Pasta","Rainbow Salad","BBQ Wings","Poke Bowl","Cheese Pizza"].map((name, idx) => (
+            <div key={name} className="group rounded-2xl border border-black/5 dark:border-white/10 bg-background/60 backdrop-blur p-5 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex items-center justify-center">
+                <Image src={idx % 2 === 0 ? "/globe.svg" : "/window.svg"} alt={name} width={96} height={96} className="object-contain" />
+              </div>
+              <div className="mt-4 flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold">{name}</h3>
+                  <p className="text-foreground/70">From $9</p>
+                </div>
+                <Link href="/menu" className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:underline">
+                  Order
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link href="/menu" className="inline-flex items-center justify-center rounded-lg bg-foreground text-background px-6 py-3 font-semibold hover:opacity-90">
+            Start Your Order
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
