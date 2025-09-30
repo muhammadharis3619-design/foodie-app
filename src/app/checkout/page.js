@@ -1,8 +1,6 @@
-// "use client";
+"use client";
 import { useCart } from "../context/CartContext";
 import Link from "next/link";
-
-export const metadata = { title: "Checkout | Foodie" };
 
 export default function CheckoutPage() {
 	const { items, subtotal, clear } = useCart();
